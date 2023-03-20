@@ -1,0 +1,74 @@
+# class Strint(int):
+#     mapping = {
+#         '0': '۰',
+#         '1': '۱',
+#         '2': '۲',
+#         '3': '۳',
+#         '4': '۴',
+#         '5': '۵',
+#         '6': '۶',
+#         '7': '۷',
+#         '8': '۸',
+#         '9': '۹',
+#         '.': '.',
+#     }
+
+#     def __init__(self, value):
+#         self.value = value
+
+#     def __lt__(self, other):
+#         if (self.value % 10) < (other.value % 10):
+#             return (self.value % 10) < (other.value % 10)
+
+#     def __gt__(self, other):
+#         if (self.value % 10) > (other.value % 10):
+#             return (self.value % 10) > (other.value % 10)
+
+#     def __le__(self, other):
+#         if (self.value) % 10 <= (other.value) % 10:
+#             return (self.value % 10) <= (other.value % 10)
+
+#     def __ge__(self, other):
+#         if (self.value % 10) >= (other.value % 10):
+#             return (self.value % 10) >= (other.value % 10)
+
+#     def __eq__(self, other):
+#         if (self.value % 10) == (other.value % 10):
+#             return (self.value % 10) == (other.value % 10)
+#         return False
+
+#     def __ne__(self, other):
+#         if (self.value % 10) != (other.value % 10):
+#             return (self.value % 10) != (other.value % 10)
+
+#     def __add__(self, other):
+#         return int(f'{self.value}{other.value}')
+
+#     def __sub__(self, other):
+#         if str(self.value).endswith(str(other.value)):
+#             return self.value // 10 ** (len(str(other.value)))
+#         elif self.value == other.value:
+#             return 0
+#         else:
+#             raise TypeError('The subtraction is not valid!')
+
+#     def __len__(self):
+#         return len(str(self.value))
+
+#     def __call__(self):
+#         s = ''
+#         for i in str(self.value):
+#             s += Strint.mapping.get(i)
+#         return s
+
+#     def __str__(self) -> str:
+#         s = ''
+#         for i in str(self.value):
+#             s += Strint.mapping.get(i)
+#         return s
+
+
+# a = Strint(2636)
+# b = Strint(36)
+
+# print(a - b)
